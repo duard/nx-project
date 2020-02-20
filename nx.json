@@ -10,5 +10,13 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "apps-sig-app": {
+      "tags": []
+    },
+    "apps-sig-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["apps-sig-app"]
+    }
+  }
 }

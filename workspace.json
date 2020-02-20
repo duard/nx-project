@@ -1,8 +1,132 @@
 {
   "version": 1,
-  "projects": {},
+  "projects": {
+    "apps-sig-app": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/apps/sig-app",
+      "sourceRoot": "apps/apps/sig-app/src",
+      "prefix": "nx-solsig",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/apps/sig-app",
+            "index": "apps/apps/sig-app/src/index.html",
+            "main": "apps/apps/sig-app/src/main.ts",
+            "polyfills": "apps/apps/sig-app/src/polyfills.ts",
+            "tsConfig": "apps/apps/sig-app/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/apps/sig-app/src/favicon.ico",
+              "apps/apps/sig-app/src/assets"
+            ],
+            "styles": ["apps/apps/sig-app/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/apps/sig-app/src/environments/environment.ts",
+                  "with": "apps/apps/sig-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "apps-sig-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "apps-sig-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "apps-sig-app:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/apps/sig-app/tsconfig.app.json",
+              "apps/apps/sig-app/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/apps/sig-app/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/apps/sig-app/jest.config.js",
+            "tsConfig": "apps/apps/sig-app/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/apps/sig-app/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "apps-sig-app-e2e": {
+      "root": "apps/apps/sig-app-e2e",
+      "sourceRoot": "apps/apps/sig-app-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/apps/sig-app-e2e/cypress.json",
+            "tsConfig": "apps/apps/sig-app-e2e/tsconfig.e2e.json",
+            "devServerTarget": "apps-sig-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "apps-sig-app:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/apps/sig-app-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/apps/sig-app-e2e/**"]
+          }
+        }
+      }
+    }
+  },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/angular"
   },
   "schematics": {
     "@nrwl/workspace": {
@@ -55,6 +179,25 @@
       "application": {
         "linter": "eslint"
       }
-    }
-  }
+    },
+    "@nrwl/angular:component": {
+      "styleext": "scss",
+      "changeDetection": "OnPush"
+    },
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress",
+      "changeDetection": "OnPush"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest",
+      "styleext": "scss",
+      "changeDetection": "OnPush"
+    },
+    "@schematics/angular:component": {
+      "styleext": "scss",
+      "changeDetection": "OnPush"
+    },
+  },
+  "defaultProject": "apps-sig-app"
 }
