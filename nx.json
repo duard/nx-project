@@ -23,6 +23,9 @@
     },
     "ng-ui-material": {
       "tags": []
+    },
+    "ng-pages": {
+      "tags": []
     }
   }
 }

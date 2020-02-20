@@ -187,6 +187,38 @@
           "styleext": "scss"
         }
       }
+    },
+    "ng-pages": {
+      "projectType": "library",
+      "root": "libs/ng/pages",
+      "sourceRoot": "libs/ng/pages/src",
+      "prefix": "nx-solsig",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ng/pages/tsconfig.lib.json",
+              "libs/ng/pages/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ng/pages/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ng/pages/jest.config.js",
+            "tsConfig": "libs/ng/pages/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/ng/pages/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

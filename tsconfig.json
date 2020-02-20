@@ -17,7 +17,8 @@
     "baseUrl": ".",
     "paths": {
       "@nx-solsig/ng/shared-material": ["libs/ng/shared-material/src/index.ts"],
-      "@nx-solsig/ng/ui-material": ["libs/ng/ui-material/src/index.ts"]
+      "@nx-solsig/ng/ui-material": ["libs/ng/ui-material/src/index.ts"],
+      "@nx-solsig/ng/pages": ["libs/ng/pages/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

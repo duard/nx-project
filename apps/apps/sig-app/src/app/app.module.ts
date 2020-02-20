@@ -4,7 +4,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { NgUiMaterialModule } from '@nx-solsig/ng/ui-material';
 
+// import { NgPagesModule } from "@nx-solsig/ng/pages";
+
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -12,7 +15,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
     BrowserAnimationsModule,
     NgUiMaterialModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled' })
+    // NgPagesModule,
+    // RouterModule.forRoot([], { initialNavigation: 'enabled' })
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
