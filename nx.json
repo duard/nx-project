@@ -17,6 +17,12 @@
     "apps-sig-app-e2e": {
       "tags": [],
       "implicitDependencies": ["apps-sig-app"]
+    },
+    "ng-shared-material": {
+      "tags": []
+    },
+    "ng-ui-material": {
+      "tags": []
     }
   }
 }

@@ -123,6 +123,70 @@
           }
         }
       }
+    },
+    "ng-shared-material": {
+      "projectType": "library",
+      "root": "libs/ng/shared-material",
+      "sourceRoot": "libs/ng/shared-material/src",
+      "prefix": "nx-solsig",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ng/shared-material/tsconfig.lib.json",
+              "libs/ng/shared-material/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ng/shared-material/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ng/shared-material/jest.config.js",
+            "tsConfig": "libs/ng/shared-material/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/ng/shared-material/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ng-ui-material": {
+      "projectType": "library",
+      "root": "libs/ng/ui-material",
+      "sourceRoot": "libs/ng/ui-material/src",
+      "prefix": "nx-solsig",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ng/ui-material/tsconfig.lib.json",
+              "libs/ng/ui-material/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ng/ui-material/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ng/ui-material/jest.config.js",
+            "tsConfig": "libs/ng/ui-material/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/ng/ui-material/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {
@@ -181,7 +245,7 @@
       }
     },
     "@nrwl/angular:component": {
-      "styleext": "scss",
+      "style": "scss",
       "changeDetection": "OnPush"
     },
     "@nrwl/angular:application": {
@@ -191,11 +255,11 @@
     },
     "@nrwl/angular:library": {
       "unitTestRunner": "jest",
-      "styleext": "scss",
+      "style": "scss",
       "changeDetection": "OnPush"
     },
     "@schematics/angular:component": {
-      "styleext": "scss",
+      "style": "scss",
       "changeDetection": "OnPush"
     }
   },
