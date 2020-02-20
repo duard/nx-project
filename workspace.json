@@ -197,7 +197,7 @@
     "@schematics/angular:component": {
       "styleext": "scss",
       "changeDetection": "OnPush"
-    },
+    }
   },
   "defaultProject": "apps-sig-app"
 }
