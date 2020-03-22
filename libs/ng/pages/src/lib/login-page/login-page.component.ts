@@ -15,7 +15,6 @@ export class LoginPageComponent implements OnInit {
 
   login(params) {
     console.log(params);
-
   }
 
 }

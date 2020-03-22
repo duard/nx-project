@@ -2,9 +2,10 @@
 {
   "name": "duard Angular Development Container",
   "dockerFile": "Dockerfile",
-  "appPort" : ["4200:4200"],
+  "appPort" : ["4200:4200", "7777:7777"],
   "postCreateCommand": "npm install; npm audit fix; npm audit fix --force;",
   "extensions": [
+    "PKief.material-icon-theme",
     "devondcarew.bazel-code",
     "gkalpak.aio-docs-utils",
     "ms-vscode.vscode-typescript-tslint-plugin",

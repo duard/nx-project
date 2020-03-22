@@ -21,7 +21,7 @@ RUN apt-get autoremove -y \
   && rm -rf /var/lib/apt/lists/*
 
 # Portas abertas
-EXPOSE 4200
+EXPOSE 4200 7777
 # Set the default shell to bash instead of sh
 ENV SHELL /bin/zsh
 CMD ["zsh"]
