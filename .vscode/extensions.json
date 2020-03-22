@@ -2,6 +2,7 @@
   "recommendations": [
     "ms-vscode.vscode-typescript-tslint-plugin",
     "esbenp.prettier-vscode",
-    "shanoor.vscode-nginx"
+    "shanoor.vscode-nginx",
+    "ms-vscode-remote.remote-containers"
   ]
 }

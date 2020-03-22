@@ -5,7 +5,7 @@
   "editor.insertSpaces": true,
   "editor.renderWhitespace": "all",
   "editor.tabCompletion": "on",
-  "editor.fontFamily": "Consolas, 'Fira Code', Fira Code,Firacode, Victor Mono, Operator Mono, 'Courier New', monospace",
+  "editor.fontFamily": "'Fira Code', Fira Code,Firacode, Victor Mono, Operator Mono, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontWeight": "300",
   "bracketPairColorizer.forceIterationColorCycle": true,
