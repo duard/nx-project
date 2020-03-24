@@ -21,6 +21,7 @@
     "github.vscode-pull-request-github",
     "eamodio.gitlens",
     "msjsdiag.debugger-for-chrome",
-    "ms-azuretools.vscode-docker"
+    "ms-azuretools.vscode-docker",
+    "shanoor.vscode-nginx"
   ],
 }

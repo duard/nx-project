@@ -1,4 +1,4 @@
-export ZSH="/home/duard/.oh-my-zsh"
+export ZSH="/root/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 ZSH_THEME="dogenpunk"
 ZSH_THEME="dpoggi"
@@ -8,7 +8,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-export SIG_USER=duard
+
+export SIG_USER=root
 export PATH=~/.npm-global/bin:$PATH
 export NODE_ENV=development
 export PATH=$PATH:/usr/local/bin/aws

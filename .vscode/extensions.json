@@ -4,6 +4,7 @@
     "esbenp.prettier-vscode",
     "shanoor.vscode-nginx",
     "ms-vscode-remote.remote-containers",
-    "msjsdiag.debugger-for-chrome"
+    "msjsdiag.debugger-for-chrome",
+    "ms-azuretools.vscode-docker"
   ]
 }
