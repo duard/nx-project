@@ -25,6 +25,7 @@ RUN echo "Copiando Configurações Goiabeiras"
 
 COPY config/zshrc  ./root/.zshrc
 COPY config/dev.nginx.conf ./root
+ADD config/keybindings.json ./root/.vscode-server/User/keybindings.json
 
 # Portas abertas
 EXPOSE 4200 7777 4211
