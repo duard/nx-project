@@ -2,7 +2,7 @@
 {
   "name": "duard Angular Development Container",
   "dockerFile": "Dockerfile",
-  "appPort" : ["4200:4200", "7777:7777"],
+  "appPort" : ["4200:4200", "7777:7777", "4211:4211"],
   "postCreateCommand": "npm install; npm audit fix; npm audit fix --force;",
   "extensions": [
     "PKief.material-icon-theme",
@@ -10,7 +10,6 @@
     "gkalpak.aio-docs-utils",
     "ms-vscode.vscode-typescript-tslint-plugin",
     "xaver.clang-format",
-    "vscode-icons-team.vscode-icons",
     "EditorConfig.EditorConfig",
     "Angular.ng-template",
     "johnpapa.angular2",
@@ -21,6 +20,7 @@
     "esbenp.prettier-vscode",
     "github.vscode-pull-request-github",
     "eamodio.gitlens",
-    "msjsdiag.debugger-for-chrome"
+    "msjsdiag.debugger-for-chrome",
+    "ms-azuretools.vscode-docker"
   ],
 }
