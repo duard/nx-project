@@ -1,6 +1,6 @@
 // Reference: https://code.visualstudio.com/docs/remote/containers#_devcontainerjson-reference
 {
-  "name": "duard Angular Development Container",
+  "name": "duard NG DEV Container",
   "dockerFile": "Dockerfile",
   "appPort" : ["4200:4200", "7777:7777", "4211:4211"],
   "postCreateCommand": "npm install; npm audit fix; npm audit fix --force;",
