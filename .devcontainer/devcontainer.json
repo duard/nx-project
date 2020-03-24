@@ -2,10 +2,13 @@
 {
   "name": "duard NG DEV Container",
   "dockerFile": "Dockerfile",
-  "appPort" : ["4200:4200", "7777:7777", "4211:4211"],
+  "appPort": [
+    "4200:4200",
+    "7777:7777",
+    "4211:4211"
+  ],
   "postCreateCommand": "npm install; npm audit fix; npm audit fix --force;",
   "extensions": [
-    "PKief.material-icon-theme",
     "devondcarew.bazel-code",
     "gkalpak.aio-docs-utils",
     "ms-vscode.vscode-typescript-tslint-plugin",
@@ -22,6 +25,35 @@
     "eamodio.gitlens",
     "msjsdiag.debugger-for-chrome",
     "ms-azuretools.vscode-docker",
-    "shanoor.vscode-nginx"
+    "shanoor.vscode-nginx",
+    "PKief.material-icon-theme",
+    "rbbit.typescript-hero"
   ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/zsh",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontWeight": "200",
+    "terminal.integrated.macOptionIsMeta": true,
+    "terminal.integrated.fontWeightBold": "700",
+    "terminal.integrated.lineHeight": 1.6,
+    "breadcrumbs.enabled": false,
+    "window.menuBarVisibility": "toggle",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.renderWhitespace": "all",
+    "editor.tabCompletion": "on",
+    "editor.fontFamily": "'Fira Code', Fira Code,Firacode, Victor Mono, Operator Mono, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "300",
+    "bracketPairColorizer.forceIterationColorCycle": true,
+    "editor.rulers": [
+      0,
+      80
+    ],
+    "typescript.format.enable": true,
+    "editor.multiCursorModifier": "alt", 
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.editor.highlightModifiedTabs": true
+  }
 }
