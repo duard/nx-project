@@ -5,7 +5,6 @@
   "appPort": [
     "4300:4300",
     "8888:8888",
-    "4211:4211",
     "4212:4212",
   ],
   "postCreateCommand": "npm install; npm audit fix; npm audit fix --force;",
