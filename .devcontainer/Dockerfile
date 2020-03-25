@@ -26,14 +26,22 @@ RUN echo "Copiando Configurações Goiabeiras"
 
 COPY config/zshrc  ./root/.zshrc
 COPY config/dev.nginx.conf ./root
-ADD config/keybindings.json ./root/.vscode-server/User/keybindings.json
 
+# RUN echo "COPIOU 1"
+# COPY config/operator-mono.tar.gz ./root
+# RUN echo "COPIOU 2"
+# COPY config/operator-mono.tar.gz ./root/.fonts/
 
-COPY config/fonts/operator-mono/ ~/.fonts/operator-mono/
+# RUN echo "COPIOU 3"
+# ADD config/operator-mono.tar.gz ./root
+ADD config/operator-mono.tar.gz ./root/.fonts/
+ADD config/victor-mono.tar.gz ./root/.fonts/
+
+RUN fc-cache -f -v ~/.fonts/victor-mono
+
 RUN fc-cache -f -v ~/.fonts/operator-mono
 
-ADD config/fonts/victor-mono ~/.fonts/victor-mono/
-ADD config/fonts/victor-mono ~/.fonts/
+ADD config/keybindings.json ./root/.vscode-server/User/keybindings.json
 
 # RUN ls /root/.fonts
 
@@ -55,11 +63,6 @@ CMD ["zsh"]
 RUN echo "There is goiaba on ZSH shell"
 # RUN apt update && apt install  powerline fonts-powerline fonts-firacode
 
-COPY config/fonts/operator-mono/ ~/.fonts/operator-mono/
-RUN fc-cache -f -v ~/.fonts/operator-mono
-
-ADD config/fonts/victor-mono ~/.fonts/victor-mono/
-
 RUN git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git ~/.fonts/adobe-fonts/source-code-pro
 RUN fc-cache -f -v ~/.fonts/adobe-fonts/source-code-pro
 
@@ -72,15 +75,16 @@ RUN git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/t
 RUN ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "/root/.oh-my-zsh/themes/spaceship.zsh-theme"
 ENTRYPOINT     sysctl -p;   fs.inotify.max_user_watches=524288;  sysctl -p;
 
-ADD config/fonts/victor-mono ~/.fonts/victor-mono/
-ADD config/fonts/victor-mono ~/.fonts/
-ADD config/fonts/victor-mono/ ~/.fonts/victor-mono/
-ADD config/fonts/victor-mono/ ~/.fonts/
+# ADD config/fonts/victor-mono ~/.fonts/victor-mono/
+# ADD config/fonts/victor-mono ~/.fonts/
+# ADD config/fonts/victor-mono/ ~/.fonts/victor-mono/
+# ADD config/fonts/victor-mono/ ~/.fonts/
 
-COPY config/fonts/victor-mono ~/.fonts/victor-mono/
-COPY config/fonts/victor-mono ~/.fonts/
-COPY config/fonts/victor-mono/ ~/.fonts/victor-mono/
-COPY config/fonts/victor-mono/ ~/.fonts/
+# COPY config/fonts/victor-mono ~/.fonts/victor-mono/
+# COPY config/fonts/victor-mono ~/.fonts/
+# COPY config/fonts/victor-mono/ ~/.fonts/victor-mono/
+# COPY config/fonts/victor-mono/ ~/.fonts/
+ADD config/operator-mono.tar.gz  ~/.fonts/
 
 RUN echo "Goiabas Brancas"
 RUN echo \\033[31mhello; echo \\033[32mworld
