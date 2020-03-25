@@ -8,8 +8,10 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class XyzComponent implements OnInit {
   variavelXYZ = 'Goiaba';
+  // https://christiankohler.net/reactive-angular-with-ngrx-component
+  count = 0;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     if (this.variavelXYZ === 'Goiaba') {
@@ -19,4 +21,10 @@ export class XyzComponent implements OnInit {
     console.log('xyz', 'Debugando', this.variavelXYZ);
   }
 
+  // triggers change detection
+  increment() {
+    this.count = this.count + 1;
+  }
+  // also triggers change detection
+  noEffect() {}
 }
