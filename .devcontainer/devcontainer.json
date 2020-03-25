@@ -3,9 +3,10 @@
   "name": "duard NG DEV Container",
   "dockerFile": "Dockerfile",
   "appPort": [
-    "4200:4200",
-    "7777:7777",
-    "4211:4211"
+    "4300:4300",
+    "8888:8888",
+    "4211:4211",
+    "4212:4212",
   ],
   "postCreateCommand": "npm install; npm audit fix; npm audit fix --force;",
   "extensions": [

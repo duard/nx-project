@@ -46,7 +46,7 @@ ADD config/keybindings.json ./root/.vscode-server/User/keybindings.json
 # RUN ls /root/.fonts
 
 # Portas abertas
-EXPOSE 4200 7777 4211
+EXPOSE 4300 8888 4211 4212
 
 # Set the default shell to bash instead of sh
 # ENV TERM xterm-256color
