@@ -106,6 +106,7 @@ import { TestVerticalComponent } from './test-vertical/test-vertical.component';
 
 
 
+
 @NgModule({
   declarations: [
     TestVerticalComponent,
@@ -155,6 +156,15 @@ import { TestVerticalComponent } from './test-vertical/test-vertical.component';
 
   ],
   exports: [
+    FontAwesomeModule,
+    CommonModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FlexLayoutModule,
+
     MatRadioModule,
     FontAwesomeModule,
     CommonModule,

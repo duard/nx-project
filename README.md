@@ -12,6 +12,11 @@ Criar um module
 nx g @nrwl/angular:module (pasta-opcional)/nome-do-modulo --project library-onde-sera-criado  --dry-run
 ```
 
+```code 
+nx g @nrwl/angular:module  layoutOne --project ng-shared  --dry-run
+nx g @nrwl/angular:component layoutOne --project ng-shared  --dry-run
+
+```
 Criar um componente
 
 ```shell

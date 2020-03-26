@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'solsig-test-vertical',
+  selector: 'nx-solsig-test-vertical',
   templateUrl: './test-vertical.component.html',
   styleUrls: ['./test-vertical.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
