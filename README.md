@@ -41,3 +41,10 @@ nx dep-graph --host 0.0.0.0
 ```
 nx dep-graph --host 0.0.0.0 --port 4212
 ```
+
+
+#### BUILD
+
+```shell
+node --max_old_space_size=4096  /usr/local/bin/nx build --prod --named-chunks=true --vendor-chunk=true --build-optimizer --progress --optimization --project=apps-sig-app
+```
