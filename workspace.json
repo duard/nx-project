@@ -62,7 +62,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "apps-sig-app:build"
+            "browserTarget": "apps-sig-app:build",
+            "proxyConfig": "apps/apps/sig-app/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -313,6 +314,63 @@
       "schematics": {
         "@nrwl/angular:component": {
           "style": "scss"
+        }
+      }
+    },
+    "apps-simples-api": {
+      "root": "apps/apps/simples-api",
+      "sourceRoot": "apps/apps/simples-api/src",
+      "projectType": "application",
+      "prefix": "apps-simples-api",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "options": {
+            "outputPath": "dist/apps/apps/simples-api",
+            "main": "apps/apps/simples-api/src/main.ts",
+            "tsConfig": "apps/apps/simples-api/tsconfig.app.json",
+            "assets": ["apps/apps/simples-api/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/apps/simples-api/src/environments/environment.ts",
+                  "with": "apps/apps/simples-api/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "apps-simples-api:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "apps/apps/simples-api/.eslintrc",
+            "tsConfig": [
+              "apps/apps/simples-api/tsconfig.app.json",
+              "apps/apps/simples-api/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/apps/simples-api/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/apps/simples-api/jest.config.js",
+            "tsConfig": "apps/apps/simples-api/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
         }
       }
     }

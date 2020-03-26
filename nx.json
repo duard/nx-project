@@ -35,6 +35,9 @@
     },
     "shared-assets": {
       "tags": ["scope:shared", "type:assets"]
+    },
+    "apps-simples-api": {
+      "tags": []
     }
   }
 }

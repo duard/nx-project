@@ -34,6 +34,10 @@ nx serve --host 0.0.0.0 --disableHostCheck --disable-host-check --port 4300 --pr
 ```
 
 ```shell
+nx serve --host 0.0.0.0 --port 4300 --project apps-simples-api
+```
+
+```shell
 git add . ; git commit -m "Rodando via VSCode Container :-)"; git push
 ```
 
@@ -55,4 +59,11 @@ nx dep-graph --host 0.0.0.0 --port 4212
 
 ```shell
 node --max_old_space_size=4096  /usr/local/bin/nx build --prod --named-chunks=true --vendor-chunk=true --build-optimizer --progress  --project=apps-sig-app
+```
+
+
+##### add api
+
+```code 
+nx g @nrwl/nest:app apps/simples-api --frontendProject=apps-sig-app --dry-run
 ```
