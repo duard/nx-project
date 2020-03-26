@@ -33,7 +33,7 @@ RUN fc-cache -f -v ~/.fonts/operator-mono
 ADD config/keybindings.json ./root/.vscode-server/User/keybindings.json
 
 # Portas abertas
-EXPOSE 4300 8888 4212
+EXPOSE 4300 8888 4211 4212
 
 # Set the default shell to bash instead of sh
 # ENV TERM xterm-256color

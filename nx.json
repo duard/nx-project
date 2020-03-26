@@ -26,6 +26,12 @@
     },
     "ng-pages": {
       "tags": []
+    },
+    "ng-core": {
+      "tags": []
+    },
+    "ng-shared": {
+      "tags": []
     }
   }
 }
