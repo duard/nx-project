@@ -32,6 +32,9 @@
     },
     "ng-shared": {
       "tags": []
+    },
+    "shared-assets": {
+      "tags": ["scope:shared", "type:assets"]
     }
   }
 }
