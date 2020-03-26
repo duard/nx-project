@@ -46,7 +46,6 @@ nx affected:dep-graph --host 0.0.0.0
 
 Verificar dependencias do projeto
 ```
-nx dep-graph --host 0.0.0.0
 ```
 ```
 nx dep-graph --host 0.0.0.0 --port 4212
