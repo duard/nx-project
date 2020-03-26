@@ -1,7 +1,22 @@
 {
   "extends": "../../../tslint.json",
   "rules": {
-    "directive-selector": [true, "attribute", "nxSolsig", "camelCase"],
-    "component-selector": [true, "element", "nx-solsig", "kebab-case"]
+    "directive-selector": [
+      true,
+      "attribute",
+      "nxSolsig",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "nx-solsig",
+      "kebab-case"
+    ]
+  },
+  "linterOptions": {
+    "exclude": [
+      "!**/*"
+    ]
   }
 }
