@@ -34,7 +34,7 @@ nx serve --host 0.0.0.0 --disableHostCheck --disable-host-check --port 4300 --pr
 ```
 
 ```shell
-nx serve --host 0.0.0.0 --port 4300 --project apps-simples-api
+nx serve --host 0.0.0.0  --project apps-simples-api
 ```
 
 ```shell
