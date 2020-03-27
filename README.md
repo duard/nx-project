@@ -43,15 +43,15 @@ git add . ; git commit -m "Rodando via VSCode Container :-)"; git push
 
 
 Verificar o que sua alteração impactou no projetop
+
 ```shell
 nx affected:dep-graph --host 0.0.0.0
 ```
 
 Verificar dependencias do projeto
-```
-```
-```
-nx dep-graph --host 0.0.0.0 --port 4212
+
+```shell
+nx dep-graph --host 0.0.0.0
 ```
 
 
