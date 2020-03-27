@@ -1,15 +1,30 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
-@Entity('organizacao')
+@Entity('organizacoes')
 export class Organizacao {
 
-  @PrimaryGeneratedColumn('uuid') id: string;
+  @PrimaryGeneratedColumn()
+  id: number;
 
-  @Column({ type: 'varchar', nullable: false }) title: string;
-  @Column({ type: 'date', nullable: true }) watchedOn: Date;
-  @Column({ type: 'varchar', nullable: true }) genre: string;
-  @Column({ type: 'integer', nullable: true }) rating: number;
+  @Column()
+  alias: string;
+
+  @Column()
+  api_url_prod: string;
+
+  @Column()
+  api_url_dev: string;
+
+  @Column()
+  api_port: number;
+
+  @Column()
+  nome: string;
+
+  @Column()
+  email: string;
 }
+
 /*
 CREATE TABLE `organizacoes` (
   `id` int(11) NOT NULL,

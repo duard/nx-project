@@ -44,25 +44,17 @@ export class OrganizacoesService {
     return await this.entityRepository.find();
   }
 
-  // async create(contact: Organizacao): Promise<Organizacao> {
-  //   return await this.entityRepository.save(contact);
-  // }
+  async create(contact: Organizacao): Promise<Organizacao> {
+    return await this.entityRepository.save(contact);
+  }
 
-  // async update(contact: Organizacao): Promise<UpdateResult> {
-  //   return await this.entityRepository.update(contact.id, contact);
-  // }
+  async update(contact: Organizacao): Promise<UpdateResult> {
+    return await this.entityRepository.update(contact.id, contact);
+  }
 
-  // async delete(id): Promise<DeleteResult> {
-  //   return await this.entityRepository.delete(id);
-  // }
+  async delete(id): Promise<DeleteResult> {
+    return await this.entityRepository.delete(id);
+  }
 
-  // getHello(): { value: string } {
-  //   return { value: 'Organizações Service' };
-  // }
 
-  // getAll(): Promise<any> {
-  //   return new Promise((resolve) => {
-  //     resolve(this.courses);
-  //   });
-  // }
 }
