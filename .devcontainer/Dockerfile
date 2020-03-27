@@ -2,7 +2,7 @@ FROM node:10
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update
-RUN apt-get install -y git procps zsh
+RUN apt-get install -y git procps zsh nano zip htop
 ENV DEBIAN_FRONTEND=dialog
 ENV TERM xterm-256color
 
@@ -10,6 +10,7 @@ ENV TERM xterm-256color
 RUN npm install -g eslint
 RUN npm install -g @angular/cli
 RUN npm install -g @nrwl/cli
+RUN npm install -g @nestjs/cli
 # RUN npm install; npm audit fix; npm audit fix --force;
 
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true

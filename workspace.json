@@ -373,6 +373,32 @@
           }
         }
       }
+    },
+    "nest-sistema": {
+      "root": "libs/nest/sistema",
+      "sourceRoot": "libs/nest/sistema/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/nest/sistema/tsconfig.lib.json",
+              "libs/nest/sistema/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/nest/sistema/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/nest/sistema/jest.config.js",
+            "tsConfig": "libs/nest/sistema/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

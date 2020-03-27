@@ -23,7 +23,8 @@
       "@nx-solsig/ng/pages": ["libs/ng/pages/src/index.ts"],
       "@nx-solsig/ng/core": ["libs/ng/core/src/index.ts"],
       "@nx-solsig/ng/shared": ["libs/ng/shared/src/index.ts"],
-      "@nx-solsig/shared/assets": ["libs/shared/assets/src/index.ts"]
+      "@nx-solsig/shared/assets": ["libs/shared/assets/src/index.ts"],
+      "@nx-solsig/nest/sistema": ["libs/nest/sistema/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

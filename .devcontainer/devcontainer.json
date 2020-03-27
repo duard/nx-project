@@ -39,7 +39,11 @@
     "christian-kohler.path-intellisense",
     "zignd.html-css-class-completion",
     // "mrmlnc.vscode-scss",
-    "cmborchert.local-import-intellisense"
+    "cmborchert.local-import-intellisense",
+
+    // NestJs
+    "ashinzekene.nestjs",
+    "abhijoybasak.nestjs-files"
   ],
   "settings": {
     "[typescript]": {

@@ -49,6 +49,7 @@
     "@nestjs/core": "^6.8.3",
     "@nestjs/graphql": "^7.1.1",
     "@nestjs/platform-express": "^6.8.3",
+    "@nestjs/typeorm": "^7.0.0",
     "@ng-bootstrap/ng-bootstrap": "^6.0.0",
     "@ngrx/effects": "^9.0.0",
     "@ngrx/entity": "^9.0.0",
@@ -67,6 +68,7 @@
     "hammerjs": "^2.0.8",
     "js-brasil": "^2.1.0",
     "libphonenumber-js": "^1.7.44",
+    "mysql": "^2.18.1",
     "ng-brazil": "^2.0.10",
     "ng-material-multilevel-menu": "^4.11.3",
     "ngx-bootstrap": "^5.5.0",
@@ -74,6 +76,7 @@
     "ngx-take-until-destroy": "^5.4.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.5.0",
+    "typeorm": "^0.2.24",
     "zone.js": "^0.10.2"
   },
   "devDependencies": {
@@ -94,6 +97,7 @@
     "cypress": "^4.2.0",
     "dotenv": "8.2.0",
     "eslint": "6.8.0",
+    "express-list-routes": "^0.1.4",
     "jest": "^25.1.0",
     "jest-preset-angular": "^8.1.2",
     "prettier": "2.0.2",
