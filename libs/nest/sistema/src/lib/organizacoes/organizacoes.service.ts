@@ -36,7 +36,7 @@ export class OrganizacoesService {
   courses = COURSES;
 
   constructor(
-    @InjectRepository(Organizacao)
+    @InjectRepository(Organizacao, 'gestao')
     private entityRepository: Repository<Organizacao>
   ) {}
 

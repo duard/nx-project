@@ -6,7 +6,7 @@ import { Organizacao } from './organizacoes.entity';
 import { OrganizacoesService } from './organizacoes.service';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Organizacao])],
+  imports: [TypeOrmModule.forFeature([Organizacao], 'gestao')],
   controllers: [OrganizacoesController],
   providers: [OrganizacoesService],
 })

@@ -1,0 +1,15 @@
+{
+  "name": "sigpharma",
+  "type": "mysql",
+  "host": "db.sigpharma.com",
+  "port": 3306,
+  "username": "admin",
+  "password": "6f2e2582736d14740c0cf469f05ea551",
+  "database": "apresentacao",
+  "logging": true,
+
+  "entities": [
+    "dist/**/*.entity{.ts,.js}",
+    "src/**/*.entity{.ts,.js}"
+  ]
+}
