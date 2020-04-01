@@ -10,7 +10,6 @@ nx g @nrwl/angular:lib --directory=ng models --dry-run
 nx generate library assets --directory=shared --tags="scope:shared,type:assets" --style=scss
 ```
 
-
 Criar um module
 
 ```shell
