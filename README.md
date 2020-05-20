@@ -1,8 +1,9 @@
 # simples dev container
 
-Instalar dependencias
+Instalar dependencias globais
 
 ```shell
+npm install -g @nrwl/cli
 npm install -g eslint @angular/cli @nrwl/cli;
 npm install; npm audit fix; npm audit fix --force;
 ```
